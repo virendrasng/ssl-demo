@@ -22,6 +22,8 @@ Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-
 #### export certificate from jks and add to cert file - 
   keytool -export -keystore ssl-server.jks -alias selfsigned_keypair -file ssl-server.cert
   If possible the cer file can be downloaded from chrome also. While downloading you can provide any password on prompt.
+
+#### This certificate can be added to jre's certifacate file also instead of setting it in java code after changing to jts.
   
 #### Print certificate content - 
   keytool -printcert -v -file ssl-server.crt (It is same as list -v')

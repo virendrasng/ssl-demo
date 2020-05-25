@@ -15,6 +15,7 @@ public class DemoApplication {
 		
 		/*
 		 * trustStore is added to avoid below error -
+		 * 
 		 * I/O error on GET request for "https://localhost/ssl/test/secured":
 		 * sun.security.validator.ValidatorException: PKIX path building failed:
 		 * sun.security.provider.certpath.SunCertPathBuilderException: unable to find
