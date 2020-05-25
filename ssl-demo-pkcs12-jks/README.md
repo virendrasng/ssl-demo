@@ -18,10 +18,13 @@ Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-
    `n this case be careful 'alias' should remain same.
 
 #### see jks content - keytool -list -v ssl-server.jks
-#### Print certificate content - 
-  keytool -printcert -v -file ssl-server.crt (It is same as list -v')
+
 #### export certificate from jks and add to cert file - 
   keytool -export -keystore ssl-server.jks -alias selfsigned_keypair -file ssl-server.cert
+  If possible the cer file can be downloaded from chrome also. While downloading you can provide any password on prompt.
+  
+#### Print certificate content - 
+  keytool -printcert -v -file ssl-server.crt (It is same as list -v')
 #### export certificate from PKCS12 and add to cert file - 
   keytool -export -file ssl-server.cert -alias selfsigned_keypair -keystore ssl-server.p12 -deststoretype PKCS12
 #### add certificate from cert file to truststore -
