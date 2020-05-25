@@ -20,4 +20,4 @@ Truststore contains public key and certificate. It is shared with client. Key St
 Above .jks file contains - public key, private key and certificate
 
 
-In java public directory all the trust store file are saved.
+- In java public directory all the trust store file are saved.
