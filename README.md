@@ -9,7 +9,7 @@ d. ssl-secured-client-demo
 
 # ssl-demo-pkcs12-jks is a Hello world REST api to demonstrate minimum configuration for enabling SSL with JKS and PKCS12.
 
-For below experiments register localhost server in hosts file as -> 192.168.56.1 localhost. All these examples are with PKCS12.
+All below examples are with PKCS12.
 1. http api ssl-client-demo calls https api ssl-demo-pkcs12
 2. https api ssl-secured-client-demo calls https api ssl-demo-pkcs12
 
