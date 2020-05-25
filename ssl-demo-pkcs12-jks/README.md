@@ -24,6 +24,7 @@ Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-
 #### add certificate from cert file to truststore -
   keytool -import -file ssl-server.cert -alias selfsigned_keypair -keystore ssl-server.jts
 
+#### Notes
 - JKS (java key store) - A keystore is a repository of security certificates used in SSL encryption
 - Truststore contains public key and certificate. It is shared with client.
 - Key Store contains public key, private key and certificate so it can not be shared with client or anyone. 
