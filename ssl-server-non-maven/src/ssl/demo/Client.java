@@ -18,7 +18,7 @@ public class Client {
 
 		// SSL part //
 		Security.addProvider(new Provider());
-
+		System.setProperty("javax.net.debug", "all");
 		System.setProperty("javax.net.ssl.trustStore", "ssl-server.jts");
 		System.setProperty("javax.net.ssl.trustStorePassword", "123456");
 		// System.setProperty("javax.net.debug", "all");
