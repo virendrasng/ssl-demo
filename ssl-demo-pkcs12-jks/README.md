@@ -1,4 +1,7 @@
-## ssl demo with pkcs12 andf jks
+## 														ssl demo with pkcs12 and jks
+
+- URL of this api - https://localhost/ssl/test/secured
+
 SSL enabled Hello world programme using PKCS12 and JKS types key stores
 
 #### Concepts taken from -> https://howtodoinjava.com/spring-boot/spring-boot-ssl-https-example/

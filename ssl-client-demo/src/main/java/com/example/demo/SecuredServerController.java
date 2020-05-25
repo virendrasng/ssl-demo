@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 class SecuredServerController {
-//	@Autowired
 	private RestTemplate restTemplate;
 
 	@PostConstruct
