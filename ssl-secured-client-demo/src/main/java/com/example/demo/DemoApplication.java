@@ -12,10 +12,10 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		// System.setProperty("javax.net.debug", "all");
-		
+
 		/*
-		 * trustStore is added to avoid below error -
-		 * I/O error on GET request for "https://localhost/ssl/test/secured":
+		 * trustStore is added to avoid below error - I/O error on GET request for
+		 * "https://localhost/ssl/test/secured":
 		 * sun.security.validator.ValidatorException: PKIX path building failed:
 		 * sun.security.provider.certpath.SunCertPathBuilderException: unable to find
 		 * valid certification path to requested target; nested exception is
@@ -25,7 +25,7 @@ public class DemoApplication {
 		 * valid certification path to requested target
 		 */
 		System.setProperty("javax.net.ssl.trustStore",
-				"D:\\Data\\study\\devl\\projects\\ssl\\ssl-demo\\ssl-client-demo\\src\\main\\resources\\ssl-server.jts");
+				"D:\\Data\\study\\devl\\projects\\ssl\\ssl-demo\\ssl-secured-client-demo\\src\\main\\resources\\ssl-server.jts");
 
 		/*
 		 * HttpsURLConnection.setDefaultHostnameVerifier ... added to avoid below error
