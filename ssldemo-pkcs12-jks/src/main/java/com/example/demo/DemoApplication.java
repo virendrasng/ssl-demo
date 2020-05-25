@@ -15,9 +15,9 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		System.setProperty("javax.net.debug", "all");
-		System.setProperty("javax.net.ssl.trustStore", "D:\\Data\\study\\devl\\projects\\ssl\\ssl-demo\\ssl-client-demo\\src\\main\\resources\\ssl-server.jts");
-		System.setProperty("javax.net.ssl.trustStorePassword", "123456");
+//		System.setProperty("javax.net.debug", "all");
+//		System.setProperty("javax.net.ssl.trustStore", "D:\\Data\\study\\devl\\projects\\ssl\\ssl-demo\\ssl-client-demo\\src\\main\\resources\\ssl-server.jts");
+//		System.setProperty("javax.net.ssl.trustStorePassword", "123456");
 	}
 
 	@Bean
