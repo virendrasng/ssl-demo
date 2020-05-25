@@ -36,7 +36,6 @@ public class DemoApplication {
 		 */
 		HttpsURLConnection.setDefaultHostnameVerifier(new javax.net.ssl.HostnameVerifier() {
 			public boolean verify(String hostname, SSLSession sslSession) {
-				// localhost is added in hosts file -> 192.168.56.1 localhost
 				return hostname.equals("localhost");
 			}
 		});
