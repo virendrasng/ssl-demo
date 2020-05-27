@@ -1,4 +1,4 @@
-## 														ssl demo with pkcs12 and jks
+## SSL demo with pkcs12 and jks
 
 - URL of this api - https://localhost/ssl/test/secured
 
@@ -12,7 +12,7 @@ SSL enabled Hello world programme using PKCS12 and JKS types key stores
 ------------------------------------------------------------------------------
 Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
 #### Generate PKCS12 format key pair - 
-  keytool -genkeypair -alias selfsigned_keypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ssl-server.p12 -validity 3650
+  keytool -genkeypair -alias selfsigned_keypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ssl-server.p12 -validity 3650 -dname "CN=localhost,OU=QE,O=example.com,L=Brno,C=CZ" -storepass 123456 -keypass 123456
 #### export jks file to PKCS12  format -
    keytool -importkeystore -srckeystore ssl-server.jks -destkeystore ssl-server-from-jks.p12 -deststoretype PKCS12
    `n this case be careful 'alias' should remain same.

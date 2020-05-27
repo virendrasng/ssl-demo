@@ -33,12 +33,15 @@ public class DemoApplication {
 		 * java.security.cert.CertificateException: No name matching localhost found;
 		 * nested exception is javax.net.ssl.SSLHandshakeException:
 		 * java.security.cert.CertificateException: No name matching localhost found
+		 * 
+		 * This error can also be avoided by adding -dname "CN=localhost,OU=QE,O=example.com,L=Brno,C=CZ" in the jks certificate and then export jts.
 		 */
-		HttpsURLConnection.setDefaultHostnameVerifier(new javax.net.ssl.HostnameVerifier() {
-			public boolean verify(String hostname, SSLSession sslSession) {
-				return hostname.equals("localhost");
-			}
-		});
+		// javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(new
+		// javax.net.ssl.HostnameVerifier() {
+		// public boolean verify(String hostname, javax.net.ssl.SSLSession sslSession) {
+		// return hostname.equals("localhost");
+		// }
+		// });
 	}
 
 }
