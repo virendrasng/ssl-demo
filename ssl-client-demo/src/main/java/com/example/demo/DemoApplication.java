@@ -9,7 +9,10 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		// System.setProperty("javax.net.debug", "all");
-
+		//System.setProperty("javax.net.debug", "ssl,handshake");
+		//System.setProperty("javax.net.debug", "ssl");
+		//System.setProperty("javax.net.debug", "handshake");
+		
 		/*
 		 * trustStore is added to avoid below error -
 		 * 

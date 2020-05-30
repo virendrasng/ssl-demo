@@ -9,8 +9,8 @@ SSL enabled Hello world programme using PKCS12 and JKS types key stores
 #### Command to generate JKS key pair -
   keytool -genkey -alias selfsigned_keypair -keyalg RSA -keysize 2048 -validity 700 -keypass 123456 -storepass 123456 -keystore ssl-server.jks -dname "CN=localhost,OU=QE,O=example.com,L=Brno,C=CZ" -storepass 123456 -keypass 123456
 
-------------------------------------------------------------------------------
-Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
+## Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
+
 #### Generate PKCS12 format key pair - 
   keytool -genkeypair -alias selfsigned_keypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ssl-server.p12 -validity 3650 -dname "CN=localhost,OU=QE,O=example.com,L=Brno,C=CZ" -storepass 123456 -keypass 123456
 #### export jks file to PKCS12  format -
@@ -50,5 +50,24 @@ Another solution from https://www.drissamri.be/blog/java/enable-https-in-spring-
 - pem file with just certificate
   `openssl pkcs12 -in ssl-server.p12 -out ssl-server-cert.pem -clcerts -nokeys`
 
+## Similar solution from -> https://www.youtube.com/watch?v=vYhY11p47rI (It contains step to generate CA signing request also)
+- Trust Store `Holds Certified Public Keys of other applications`
+- Key Store `Holds Private and Certified Public Key of own application`
+
+- Generate CA signing request `keytool -certreq -keyalg -RSA -alias selfsigned_keypair -file certreq.txt -keystore ssl-server.jks`
+
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\1.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\2.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\3.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\4.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\5.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\6.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\7.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\8.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\9.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\10.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\11.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\1.jpg)
+![alt text](D:\Data\study\devl\projects\ssl\ssl-demo\ssl-demo-pkcs12-jks\images\1.jpg)
 
 
